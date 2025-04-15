@@ -30,7 +30,7 @@ export default function AdminLayout({children}: { children: React.ReactNode }) {
           <SidebarMenu>
             <SidebarMenuItem>
               <Link href="/admin/users" passHref>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild data-sidebar="menu-button">
                   <>
                     <Icons.user className="mr-2 h-4 w-4"/>
                     <span>Users</span>
@@ -40,7 +40,7 @@ export default function AdminLayout({children}: { children: React.ReactNode }) {
             </SidebarMenuItem>
             <SidebarMenuItem>
               <Link href="/admin/projects" passHref>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild data-sidebar="menu-button">
                   <>
                     <Icons.workflow className="mr-2 h-4 w-4"/>
                     <span>Projects</span>
@@ -50,7 +50,7 @@ export default function AdminLayout({children}: { children: React.ReactNode }) {
             </SidebarMenuItem>
             <SidebarMenuItem>
               <Link href="/admin/tasks" passHref>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild data-sidebar="menu-button">
                   <>
                     <Icons.file className="mr-2 h-4 w-4"/>
                     <span>Tasks</span>
@@ -60,7 +60,7 @@ export default function AdminLayout({children}: { children: React.ReactNode }) {
             </SidebarMenuItem>
             <SidebarMenuItem>
               <Link href="/admin/insights" passHref>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild data-sidebar="menu-button">
                   <>
                     <Icons.panelLeft className="mr-2 h-4 w-4"/>
                     <span>Insights</span>
@@ -83,3 +83,4 @@ export default function AdminLayout({children}: { children: React.ReactNode }) {
     </SidebarProvider>
   );
 }
+

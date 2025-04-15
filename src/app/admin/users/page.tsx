@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import UserTable from '@/components/Admin/UserTable';
+import UserTable from '@/components/UserTable';
 
 const UserManagementPage = () => {
   return (

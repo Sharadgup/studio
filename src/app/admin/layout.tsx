@@ -31,12 +31,10 @@ export default function AdminLayout({children}: { children: React.ReactNode }) {
             <SidebarMenuItem>
               <Link href="/admin/users" passHref>
                 <SidebarMenuButton asChild>
-                  <>
-                    <Icons.user className="mr-2 h-4 w-4"/>
-                    <span>Users</span>
-                  </>
                 </SidebarMenuButton>
-              </Link>
+                  <Icons.user className="mr-2 h-4 w-4"/>
+                  <span>Users</span>
+                </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
               <Link href="/admin/projects" passHref>

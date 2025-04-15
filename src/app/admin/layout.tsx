@@ -44,6 +44,12 @@ export default function AdminLayout({children}: { children: React.ReactNode }) {
                 <span>Tasks</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton href="/admin/insights">
+                <Icons.panelLeft className="mr-2 h-4 w-4"/>
+                <span>Insights</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
           </SidebarMenu>
         </SidebarContent>
         <SidebarFooter>
@@ -59,3 +65,4 @@ export default function AdminLayout({children}: { children: React.ReactNode }) {
     </SidebarProvider>
   );
 }
+

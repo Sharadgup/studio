@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import {
   Sidebar,
@@ -9,13 +10,14 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarProvider,
   SidebarSeparator,
+  SidebarProvider,
   SidebarTrigger,
   SidebarInset,
 } from '@/components/ui/sidebar';
 import {Icons} from '@/components/icons';
 import {Dashboard} from '@/components/ui/dashboard';
+import Link from 'next/link';
 
 export default function AdminLayout({children}: { children: React.ReactNode }) {
   return (
@@ -27,28 +29,44 @@ export default function AdminLayout({children}: { children: React.ReactNode }) {
         <SidebarContent>
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton href="/admin/users">
-                <Icons.user className="mr-2 h-4 w-4"/>
-                <span>Users</span>
-              </SidebarMenuButton>
+              <Link href="/admin/users" passHref>
+                <SidebarMenuButton asChild>
+                  <>
+                    <Icons.user className="mr-2 h-4 w-4"/>
+                    <span>Users</span>
+                  </>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton href="/admin/projects">
-                <Icons.workflow className="mr-2 h-4 w-4"/>
-                <span>Projects</span>
-              </SidebarMenuButton>
+              <Link href="/admin/projects" passHref>
+                <SidebarMenuButton asChild>
+                  <>
+                    <Icons.workflow className="mr-2 h-4 w-4"/>
+                    <span>Projects</span>
+                  </>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton href="/admin/tasks">
-                <Icons.file className="mr-2 h-4 w-4"/>
-                <span>Tasks</span>
-              </SidebarMenuButton>
+              <Link href="/admin/tasks" passHref>
+                <SidebarMenuButton asChild>
+                  <>
+                    <Icons.file className="mr-2 h-4 w-4"/>
+                    <span>Tasks</span>
+                  </>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton href="/admin/insights">
-                <Icons.panelLeft className="mr-2 h-4 w-4"/>
-                <span>Insights</span>
-              </SidebarMenuButton>
+              <Link href="/admin/insights" passHref>
+                <SidebarMenuButton asChild>
+                  <>
+                    <Icons.panelLeft className="mr-2 h-4 w-4"/>
+                    <span>Insights</span>
+                  </>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarContent>
@@ -65,4 +83,3 @@ export default function AdminLayout({children}: { children: React.ReactNode }) {
     </SidebarProvider>
   );
 }
-
